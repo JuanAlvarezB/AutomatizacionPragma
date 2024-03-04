@@ -148,7 +148,7 @@
             <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 04-11-2022 22:45</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 17-10-2023 17:02</span>
     <br style="clear:left"/>
 </div>
 
@@ -187,6 +187,12 @@
                                     (tag)</a>
                                 </span>
                             </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="5849e7e3a2fef5a7c22f4265a8af47d525049484a0e805324ce6cbde1dcf9f54.html">Element Should Be Present Exception
+                                    (error)</a>
+                                </span>
+                            </p>
                         </td>
                     </tr>
                 </table>
@@ -195,9 +201,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-x-circle-fill failure-icon fa-2x' title='FAILURE'></i></a></span>
                             <span class="test-case-title">
-                                <span class="success-color">Realiza el primer ingreso al carrito
+                                <span class="failing-color">Realiza el primer ingreso al carrito
                                     <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -214,30 +220,59 @@
 
     <div id="beforetable"></div>
     <div id="contenttilttle">
+            <div class="screenshotFailure panel panel-danger">
+    <div style="display:block">
+        <div class="table">
+            <div class="row">
+                <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
+                    <span class="error-message error-message-title">Element should be present exception: Expected condition failed: waiting for By.xpath: //a[@title='Women'] to be present (tried for 5 second(s) with 100 milliseconds interval)Build info: version: '4.4.0', revision: 'e5c75ed026a'System info: host: 'QV-4400', ip: '192.168.1.18', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'Driver info: driver.version: unknown</span>
+                </div>
+                <div class="col-sm-2">
+                    <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
+                       role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="bi bi-eye"></i> More details</a>
+                </div>
+             </div>
+        </div>
+    <div>
+
+    <!-- Details Section -->
+    <div class="row stacktrace-details">
+      <div class="col">
+        <div class="collapse multi-collapse" id="stacktraceModal-overall">
+            <div class="card">
+                <div class="card-header">
+                    <h4>net.thucydides.core.webdriver.exceptions.ElementShouldBePresentException </h4>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <pre>tasks.SeleccionarRopaMujerTasks.performAs(SeleccionarRopaMujerTasks.java:23)<br />automatizacionpragma.Definitions.StepDefinitions.juanCamiloSeleccionaRopaParaMujer(StepDefinitions.java:22)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java:66)<br />io.cucumber.java.Invoker.invoke(Invoker.java:24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java:85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java:57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java:84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java:75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java:28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java:137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java:59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)<br /></pre>
+                    </div>
+
+                    <h4>
+                        Caused by: org.openqa.selenium.TimeoutException
+                    </h4>
+                    <div>
+                            <pre>Expected condition failed: waiting for By.xpath: //a[@title='Women'] to be present (tried for 5 second(s) with 100 milliseconds interval)<br>Build info: version: '4.4.0', revision: 'e5c75ed026a'<br>System info: host: 'QV-4400', ip: '192.168.1.18', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.5'<br>Driver info: driver.version: unknown</pre>
+                        <pre>tasks.SeleccionarRopaMujerTasks.performAs(SeleccionarRopaMujerTasks.java :23)<br />automatizacionpragma.Definitions.StepDefinitions.juanCamiloSeleccionaRopaParaMujer(StepDefinitions.java :22)<br />io.cucumber.java.Invoker.doInvoke(Invoker.java :66)<br />io.cucumber.java.Invoker.invoke(Invoker.java :24)<br />io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java :47)<br />io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java :29)<br />io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java :66)<br />io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java :63)<br />io.cucumber.core.runner.TestStep.executeStep(TestStep.java :85)<br />io.cucumber.core.runner.TestStep.run(TestStep.java :57)<br />io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java :51)<br />io.cucumber.core.runner.TestCase.run(TestCase.java :84)<br />io.cucumber.core.runner.Runner.runPickle(Runner.java :75)<br />io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java :129)<br />io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java :23)<br />io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java :129)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :144)<br />io.cucumber.junit.FeatureRunner.runChild(FeatureRunner.java :28)<br />io.cucumber.junit.FeatureRunner.run(FeatureRunner.java :137)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :259)<br />io.cucumber.junit.CucumberSerenityRunner.runChild(CucumberSerenityRunner.java :59)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java :69)<br />worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java :74)<br /></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                <div class="panel-body">
+                    <a href="#" target="_blank" class="btn btn-info">HTML Source</a>
+                </div>
+            </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="0e31df6562094d33dfe1fd7842240562a0ce9805f25c05096051775a104c6b78.png" title=" Given Juan Camilo ingresa al sitio automationpractice" width="1350"/>
-                <img src="0e31df6562094d33dfe1fd7842240562a0ce9805f25c05096051775a104c6b78.png" title=" Juan camilo url prueba tecnica" width="1350"/>
-                <img src="0e31df6562094d33dfe1fd7842240562a0ce9805f25c05096051775a104c6b78.png" title=" Juan Camilo opens the browser at http://automationpractice.com/index.php" width="1350"/>
-                <img src="0e31df6562094d33dfe1fd7842240562a0ce9805f25c05096051775a104c6b78.png" title=" Juan camilo url prueba tecnica (completed)" width="1350"/>
-                <img src="0e31df6562094d33dfe1fd7842240562a0ce9805f25c05096051775a104c6b78.png" title=" Given Juan Camilo ingresa al sitio automationpractice (completed)" width="1350"/>
-                <img src="ef7c82294cce01b4dd18aaa7187848b973fe60d53439c4c1ab4f4128a7346f70.png" title=" Given Juan Camilo Selecciona ropa para mujer" width="1350"/>
-                <img src="ef7c82294cce01b4dd18aaa7187848b973fe60d53439c4c1ab4f4128a7346f70.png" title=" Juan camilo seleccionar ropa mujer tasks" width="1350"/>
-                <img src="ef7c82294cce01b4dd18aaa7187848b973fe60d53439c4c1ab4f4128a7346f70.png" title=" Juan Camilo clicks on the element" width="1350"/>
-                <img src="ef7c82294cce01b4dd18aaa7187848b973fe60d53439c4c1ab4f4128a7346f70.png" title=" Juan camilo seleccionar ropa mujer tasks (completed)" width="1350"/>
-                <img src="ef7c82294cce01b4dd18aaa7187848b973fe60d53439c4c1ab4f4128a7346f70.png" title=" Given Juan Camilo Selecciona ropa para mujer (completed)" width="1350"/>
-                <img src="fc36794585e73d19ecff5b81e9024eeaedf64e848db95e2605ea7bd4daec813d.png" title=" When Agrega el producto al carrito" width="1350"/>
-                <img src="fc36794585e73d19ecff5b81e9024eeaedf64e848db95e2605ea7bd4daec813d.png" title=" Juan camilo agregar producto al carrito tasks" width="1350"/>
-                <img src="fc36794585e73d19ecff5b81e9024eeaedf64e848db95e2605ea7bd4daec813d.png" title=" Juan Camilo clicks on the element" width="1350"/>
-                <img src="15eeb780c2fb21ea0819b09f3c761ceb1a202037d622a0e51341382aa71ce9ce.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
-                <img src="15eeb780c2fb21ea0819b09f3c761ceb1a202037d622a0e51341382aa71ce9ce.png" title=" Juan Camilo clicks on the element" width="1350"/>
-                <img src="cf77d9ad2d19cdf230705eab2fc952b759ab1e004b42ffcf9c9ef343b978422f.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
-                <img src="cf77d9ad2d19cdf230705eab2fc952b759ab1e004b42ffcf9c9ef343b978422f.png" title=" Juan Camilo clicks on the element" width="1350"/>
-                <img src="619ee1afd07d5668ba40e3dacd289b650a3d905f9c8992a2bdc9987dafcdce16.png" title=" Juan Camilo clicks on the element (completed)" width="1350"/>
-                <img src="619ee1afd07d5668ba40e3dacd289b650a3d905f9c8992a2bdc9987dafcdce16.png" title=" Juan camilo agregar producto al carrito tasks (completed)" width="1350"/>
-                <img src="619ee1afd07d5668ba40e3dacd289b650a3d905f9c8992a2bdc9987dafcdce16.png" title=" When Agrega el producto al carrito (completed)" width="1350"/>
-                <img src="619ee1afd07d5668ba40e3dacd289b650a3d905f9c8992a2bdc9987dafcdce16.png" title=" Then el visualiza el total de &quot;$18.51&quot;" width="1350"/>
-                <img src="619ee1afd07d5668ba40e3dacd289b650a3d905f9c8992a2bdc9987dafcdce16.png" title=" Then validar precio total: <span class='success-color'>SUCCESS</span>" width="1350"/>
+                <img src="00d15dfed94f2b8c6a798b625d0b50e25f517b6cd973eed8c6fbbce1c3e154c3.png" title=" Given Juan Camilo ingresa al sitio automationpractice" width="1350"/>
+                <img src="00d15dfed94f2b8c6a798b625d0b50e25f517b6cd973eed8c6fbbce1c3e154c3.png" title=" Juan camilo url prueba tecnica" width="1350"/>
+                <img src="00d15dfed94f2b8c6a798b625d0b50e25f517b6cd973eed8c6fbbce1c3e154c3.png" title=" Juan Camilo opens the browser at http://automationpractice.com/index.php" width="1350"/>
+                <img src="00d15dfed94f2b8c6a798b625d0b50e25f517b6cd973eed8c6fbbce1c3e154c3.png" title=" Juan camilo url prueba tecnica (completed)" width="1350"/>
+                <img src="00d15dfed94f2b8c6a798b625d0b50e25f517b6cd973eed8c6fbbce1c3e154c3.png" title=" Given Juan Camilo ingresa al sitio automationpractice (completed)" width="1350"/>
+                <img src="00d15dfed94f2b8c6a798b625d0b50e25f517b6cd973eed8c6fbbce1c3e154c3.png" title=" Given Juan Camilo Selecciona ropa para mujer" width="1350"/>
+                <img src="00d15dfed94f2b8c6a798b625d0b50e25f517b6cd973eed8c6fbbce1c3e154c3.png" title=" Juan camilo seleccionar ropa mujer tasks" width="1350"/>
+                <img src="00d15dfed94f2b8c6a798b625d0b50e25f517b6cd973eed8c6fbbce1c3e154c3.png" title=" Juan Camilo clicks on the element: <span class='failing-color'>FAILURE</span>" width="1350"/>
             </div>
         </div>
 

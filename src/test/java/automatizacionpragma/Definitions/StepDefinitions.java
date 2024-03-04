@@ -3,7 +3,6 @@ package automatizacionpragma.Definitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.java.en_old.Ac;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.GivenWhenThen;
 import net.serenitybdd.screenplay.actors.OnStage;
@@ -102,10 +101,12 @@ public class StepDefinitions {
     public void visualizaElValorTotalCompra(String string) {
         OnStage.theActorInTheSpotlight().should(GivenWhenThen.seeThat(ValidarPrecioTotal.validarPrecioTotal(string)));
     }
+
     @Given("{actor} ingresa clic en la opcion Dresses")
     public void juanCamiloIngresaClicEnLaOpcionDresses(Actor actor) {
         actor.attemptsTo(SeleccionarDressesTasks.seleccionarDressesTasks());
     }
+
     @When("ingresa un producto con seis unidades al carrito")
     public void ingresaUnProductoConSeisUnidadesAlCarrito() {
         OnStage.theActorInTheSpotlight().attemptsTo(AgregarDressesSeisTasks.agregarDressesSeisTasks());

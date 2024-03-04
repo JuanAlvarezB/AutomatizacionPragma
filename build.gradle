@@ -1,8 +1,5 @@
-defaultTasks 'clean', 'test', 'aggregate'
-
 repositories {
     mavenCentral()
-    mavenLocal()
 }
 
 buildscript {
@@ -12,59 +9,39 @@ buildscript {
         }
     }
     dependencies {
-        classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.2"
+        classpath "net.serenity-bdd:serenity-gradle-plugin:4.0.16"
     }
 }
 
-
+apply plugin: 'groovy'
 apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'idea'
 apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
-
-sourceCompatibility = 17
-targetCompatibility = 17
-
-tasks.withType(JavaCompile) {
-    options.encoding = "UTF-8"
-}
-
-ext {
-    slf4jVersion = '1.7.7'
-    serenityCoreVersion = '3.3.2'
-    serenityCucumberVersion = '3.3.2'
-    junitVersion = '4.13.2'
-    assertJVersion = '3.23.1'
-    logbackVersion = '1.2.11'
-    jacksonAnnotations = "2.13.3"
-}
+apply plugin: 'java-library'
+apply plugin: 'jacoco'
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+ext { serenityCoreVersion = '3.3.2'}
 
 dependencies {
-    implementation "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-cucumber:${serenityCucumberVersion}",
-            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}",
-            "net.serenity-bdd:serenity-ensure:${serenityCoreVersion}",
-            "ch.qos.logback:logback-classic:${logbackVersion}",
-            "com.fasterxml.jackson.core:jackson-annotations:${jacksonAnnotations}",
-            "junit:junit:${junitVersion}",
-            "org.assertj:assertj-core:${assertJVersion}"
+    testImplementation group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '4.0.18'
+    implementation group: 'net.serenity-bdd', name: 'serenity-core', version: '4.0.18'
+    implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: '4.0.18'
+    implementation group: 'net.serenity-bdd', name: 'serenity-reports', version: '4.0.18'
+    implementation group: 'net.serenity-bdd', name: 'serenity-reports-configuration', version: '4.0.18'
+    implementation group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    implementation group: 'com.jayway.jsonpath', name: 'json-path', version: '2.4.0'
+    implementation group: 'io.github.cdimascio', name: 'dotenv-java', version: '2.2.0'
+    implementation "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"
+    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '2.0.6'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.9.1'
 }
 
 test {
-
-    systemProperties System.getProperties()
-
+    useJUnit {
+        include "**/*Runner*";
+        gradle.startParameter.continueOnFailure = true
+        testLogging.showStandardStreams = true
+        systemProperties System.getProperties()
+    }
 }
-
-serenity {
-    // Specify the root package of any JUnit acceptance tests
-    testRoot="automatizacionpragma"
-
-    // Specify the root directory of any Cucumber feature files
-    requirementsDir = "src/test/resources/Feature"
-}
-
-gradle.startParameter.continueOnFailure = true
-
-test.finalizedBy(aggregate)

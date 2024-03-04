@@ -5,7 +5,6 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
-import java.util.concurrent.TimeUnit;
 import java.time.Duration;
 
 import static userinterface.AgregarProductoAlCarritoPage.*;

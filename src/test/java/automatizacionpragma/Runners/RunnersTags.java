@@ -8,9 +8,10 @@ import org.junit.runner.RunWith;
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
         plugin = {"pretty"},
-        features = "src/test/resources/Feature",
+        features = "src/test/resources/Feature/prueba_pragma.feature",
         glue = {"automatizacionpragma/Definitions"},
         snippets = CucumberOptions.SnippetType.CAMELCASE,
+        monochrome = true,
         tags = "@pruebaTecnicaPragma",
         dryRun = false
 )

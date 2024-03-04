@@ -1,0 +1,30 @@
+
+s
+java:S1104"XMake BTN_T_SHIRTS a static final constant or non-public and provide accessors if needed.(¬¹ÒÈýÿÿÿÿ
+w
+java:S1104"\Make BTN_T_SHIRTS_DOS a static final constant or non-public and provide accessors if needed.(ÌÔñÂøÿÿÿÿ
+v
+java:S1104	"[Make BTN_ADD_TO_CART a static final constant or non-public and provide accessors if needed.(š†ª¬ÿÿÿÿÿ
+n
+java:S1104
+"XMake BTN_CHECKOUT a static final constant or non-public and provide accessors if needed.(Õš…Ð
+M
+java:S1444"2Make this "public static BTN_T_SHIRTS" field final(¬¹ÒÈýÿÿÿÿ
+Q
+java:S1444"6Make this "public static BTN_T_SHIRTS_DOS" field final(ÌÔñÂøÿÿÿÿ
+P
+java:S1444	"5Make this "public static BTN_ADD_TO_CART" field final(š†ª¬ÿÿÿÿÿ
+H
+java:S1444
+"2Make this "public static BTN_CHECKOUT" field final(Õš…Ð
+r
+java:S3008"WRename this field "BTN_T_SHIRTS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬¹ÒÈýÿÿÿÿ
+v
+java:S3008"[Rename this field "BTN_T_SHIRTS_DOS" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÌÔñÂøÿÿÿÿ
+u
+java:S3008	"ZRename this field "BTN_ADD_TO_CART" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š†ª¬ÿÿÿÿÿ
+m
+java:S3008
+"WRename this field "BTN_CHECKOUT" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õš…Ð
+U
+java:S1118":Add a private constructor to hide the implicit public one.(ðçš¬ýÿÿÿÿ
